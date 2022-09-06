@@ -14,109 +14,24 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     />
-
-    <link rel="stylesheet" href="./styles/index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/loader.css" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/index.css" />
   </head>
-
-  <!-- Body Content -->
 
   <body>
     <div id="loader"></div>
     <div class="main-container">
       <!-- Added the header elements: Logo and Login Button -->
-      <header class="header-footer" id="header">
-        <div class="header-logo">
-          <img
-            src="assests/images/logo.png"
-            alt="logo"
-            height="60px"
-            width="60px"
-          />
-        </div>
-        <div class="header_login">
-          <button
-            type="button"
-            class="btn btn-light"
-            data-toggle="modal"
-            data-target="#example-modal"
-            id="login_btn"
-          >
-            LOGIN
-          </button>
-        </div>
-      </header>
-
-      <!-- Modal for Login -->
-      <div
-        class="modal fade"
-        id="example-modal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="loginModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="loginModalLabel">Please Login</h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="form-group">
-                  <table>
-                    <tr>
-                      <td class="table_td">
-                        <label for="loginInputUsername">Username:</label>
-                      </td>
-                      <td class="table_td">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="loginInputUsername"
-                          aria-describedby="usernameHelp"
-                          placeholder="Enter Username"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="table_td">
-                        <label for="loginInputPassword">Password:</label>
-                      </td>
-                      <td class="table_td">
-                        <input
-                          type="password"
-                          class="form-control"
-                          id="loginInputPassword"
-                          aria-describedby="passwordHelp"
-                          placeholder="Enter Password"
-                        />
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="login" class="btn btn-primary" onclick="loginpop()">
-                Login
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <header class="header-footer" id="header"></header>
 
       <!-- Added the main body content: city search bar div and city lists -->
       <div id="index-container">
         <div id="banner">
           <div id="search-bar">
+            <!-- Added form element for search bar to take input-->
             <!--Make sure the form has the autocomplete function switched off:-->
             <form autocomplete="off">
               <input id="search-input" type="text" placeholder="City" />
@@ -223,107 +138,11 @@
         </a>
       </div>
 
-      <!-- Modal for Contact us -->
-
-      <div
-        class="modal fade"
-        id="example-modal2"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="loginModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <form>
-              <div class="modal-header">
-                <h5 class="modal-title" id="loginModalLabel">Get in touch</h5>
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="form-group">
-                  <label>Thank you for reaching out!!!</label>
-                  <label
-                    >Please enter your email and we will get back to you.</label
-                  >
-                  <table>
-                    <tr>
-                      <td><label for="loginInputUsername">Email:</label></td>
-                      <td>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="loginInputUsername"
-                          aria-describedby="usernameHelp"
-                          placeholder="Enter your email id"
-                          required
-                        />
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-              <div
-                class="modal-footer"
-                style="
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: end;
-                  align-items: flex-end;
-                  align-content: flex-end;
-                "
-              >
-                <input class="btn btn-primary" type="submit" value="Submit" />
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-
       <!-- Added the footer elements: Contact Us Button, Social Media Links -->
-      <footer class="header-footer" id="footer">
-        <div class="contact">
-          <button
-            type="button"
-            class="btn btn-info"
-            data-toggle="modal"
-            data-target="#example-modal2"
-            id="contactus_btn"
-          >
-            Contact Us
-          </button>
-        </div>
-
-        <div class="copyright">
-          <p>&#169; 2020 SEARCH ROOM PVT. LTD.</p>
-        </div>
-        <div class="social">
-          <a href="https://www.facebook.com" target="_blank"
-            ><img src="assests/images/facebook.png"
-          /></a>
-          <a href="https://www.instagram.com" target="_blank"
-            ><img src="assests/images/instagram.png"
-          /></a>
-          <a href="https://twitter.com" target="_blank">
-            <img src="assests/images/twitter.png" />
-          </a>
-        </div>
-      </footer>
+      <footer class="header-footer" id="footer"></footer>
     </div>
 
-    <!-- <script src="scripts/common.js"></script> -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
-    <script src="./scripts/index.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/index.js"></script>
   </body>
 </html>
